@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חנות תכשיטים יוקרתית</title>
+    <style>
+h1 {
+    color: black;
+    text-align: center;
+    font-family: Arial, sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* סרגל ניווט */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* אזור ראשי */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1608136196250-e50f657f4241?auto=format&fit=crop&w=1400&q=80');
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        /* אזור מוצרים */
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .product-card h3 {
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .product-card p {
+            padding: 0 15px;
+            color: #777;
+            font-size: 16px;
+        }
+
+        .product-card .price {
+            padding: 15px;
+            color: #333;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .buy-btn {
+            display: block;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #555;
+        }
+
+        /* אזור תחתון */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* עגלת קניות */
+        #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #cart h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #cart-items li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .checkout-btn {
+            display: block;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .checkout-btn:hover {
+            background-color: #555;
+        }
+
+        .whatsapp-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- סרגל ניווט -->
+    <nav>
+        <a href="#">בית</a>
+        <a href="#">חנות</a>
+        <a href="#">אודות</a>
+        <a href="#">צור קשר: 058-585-2244</a>
+    </nav>
+
+    <!-- אזור ראשי -->
+    <div class="hero">
+        <h1>חנות תכשיטים יוקרתית</h1>
+    </div>
+
+    <!-- מוצרים -->
+    <div class="products">
+        <!-- מוצר 1 - שרשרת -->
+        <div class="product-card">
+            <img src="https://tnx-shop.com/cdn/shop/files/H67a120a15df9436587642c3bf2d8d7cdy_1024x1024.jpg?v=1691940821" alt="שרשרת זהב עם תליון">
+            <h3>שרשרת לגברים</h3>
+            <p>שרשרת לגברים איכותית עם עיצוב ייחודי.</p>
+            <div class="price">₪80</div>
+            <div class="buy-btn" data-name="שרשרת עור" data-price="150">הוסף לעגלה</div>
+        </div>
+
+        <!-- מוצר 2 - טבעת -->
+        <div class="product-card">
+            <img src="https://www.blackmonal.com/wp-content/uploads/2021/08/%D7%98%D7%91%D7%A2%D7%AA-%D7%9C%D7%92%D7%91%D7%A8.jpg" alt="טבעת">
+            <h3>טבעת כסף</h3>
+            <p>טבעת כסף בעבודת יד עם עיצוב קלאסי.</p>
+            <div class="price">₪30</div>
+            <div class="buy-btn" data-name="טבעת כסף" data-price="300">הוסף לעגלה</div>
+        </div>
+
+        <!-- מוצר 3 - צמיד -->
+        <div class="product-card">
+            <img src="https://rappel.co.il/wp-content/uploads/2021/03/%D7%A6%D7%9E%D7%99%D7%93-%D7%A0%D7%95%D7%A6%D7%94-1.jpg" alt="צמיד">
+            <h3>צמיד עור</h3>
+            <p>צמיד עור איכותי עם אבזם מתכוונן.</p>
+            <div class="price">₪50</div>
+            <div class="buy-btn" data-name="צמיד עור" data-price="200">הוסף לעגלה</div>
+        </div>
+    </div>
+
+    <!-- עגלת קניות -->
+    <div id="cart">
+        <h3>עגלת קניות</h3>
+        <ul id="cart-items">
+            <li>אין מוצרים בעגלה</li>
+        </ul>
+        <div class="cart-total">סה"כ: ₪0</div>
+        <a href="#" id="checkout" class="checkout-btn">השלם רכישה בווצאף</a>
+    </div>
+
+    <!-- אזור תחתון -->
+    <footer>
+        <p>© 2024 חנות תכשיטים יוקרתית | צור קשר: 058-585-2244</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let cart = [];
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.querySelector('.cart-total');
+        const checkoutBtn = document.getElementById('checkout');
+
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const name = this.getAttribute('data-name');
+                const price = parseInt(this.getAttribute('data-price'));
+
+                const product = { name, price };
+                cart.push(product);
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ₪${item.price}`;
+                cartItems.appendChild(li);
+            });
+
+            if (cart.length === 0) {
+                const emptyMessage = document.createElement('li');
+                emptyMessage.textContent = 'אין מוצרים בעגלה';
+                cartItems.appendChild(emptyMessage);
+            }
+
+            cartTotal.textContent = `סה"כ: ₪${total}`;
+            checkoutBtn.onclick = function() {
+                const message = `שלום, אני מעוניין לרכוש את המוצרים הבאים: ${cart.map(item => item.name).join(', ')}. הסכום הכולל הוא ₪${total}.`;
+                const whatsappUrl = `https://wa.me/972585852244?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        }
+    </script>
+
+</body>
+</html>
